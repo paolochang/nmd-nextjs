@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Create App
+
+Run the following commands:
+
+```bash
+$ npx create-next-app@latest --typescript
+$ cd <project-name>
+```
+
+Optional argument `--typescript` for TypeScript
+
 ## Getting Started
 
 First, run the development server:
