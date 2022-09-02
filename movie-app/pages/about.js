@@ -10,6 +10,19 @@ export default function About() {
         <li>NextJS</li>
         <li>Movie APIs</li>
       </ul>
+      <h2>References</h2>
+      <ul>
+        <li>
+          <a href="https://www.themoviedb.org/" target="_blank">
+            TMDB
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:3000/api/getPopularMovies" target="_blank">
+            TMDB API example
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }

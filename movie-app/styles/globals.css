@@ -1,9 +1,43 @@
 html,
 body {
+  display: flex;
+  justify-content: center;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html {
+  --numberOfDiscoverColumns: 1;
+  --discoverColumnPadding: 30px;
+  --numberOfPosterColumns: 1;
+  --numberOfBackdropColumns: 1;
+  --imageColumnPadding: 30px;
+  --maxPrimaryPageWidth: 1400px;
+}
+html {
+  --scrollerGrey: 219, 219, 219;
+  --lightGrey: 227, 227, 227;
+  --darkerGrey: 200, 200, 200;
+  --tmdbDarkBlue: 3, 37, 65;
+  --tmdbLightBlue: 1, 180, 228;
+  --tmdbLighterGreen: 192, 254, 207;
+  --tmdbLightGreen: 30, 213, 169;
+  --tmdbLogoGreen: 144, 206, 161;
+  --tmdbLogoOrange: 253, 193, 112;
+  --tmdbLogoRed: 217, 59, 99;
+  --accountSilver: 149, 149, 149;
+  --accountPink: 234, 20, 140;
+  --accountPurple: 128, 91, 231;
+  --accountGreen: 1, 210, 119;
+  --accountTeal: 1, 198, 172;
+  --accountLightBlue: 1, 180, 228;
+  --accountBlue: 1, 119, 210;
+  --accountOrange: 210, 119, 1;
+  --accountYellow: 210, 144, 1;
+  --accountRed: 212, 2, 66;
+  --imageBorderRadius: 8px;
 }
 
 a {
@@ -13,6 +47,57 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@media screen and (min-width: 700px) {
+  html {
+    --numberOfDiscoverColumns: 2;
+  }
+}
+@media screen and (min-width: 900px) {
+  html {
+    --numberOfDiscoverColumns: 3;
+  }
+}
+@media screen and (min-width: 1040px) {
+  html {
+    --numberOfDiscoverColumns: 4;
+  }
+}
+@media screen and (min-width: 1240px) {
+  html {
+    --numberOfDiscoverColumns: 5;
+  }
+}
+@media screen and (min-width: 760px) {
+  html {
+    --numberOfPosterColumns: 2;
+  }
+}
+@media screen and (min-width: 900px) {
+  html {
+    --numberOfBackdropColumns: 2;
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    --numberOfPosterColumns: 3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    --numberOfBackdropColumns: 3;
+  }
+}
+@media screen and (min-width: 1300px) {
+  html {
+    --numberOfPosterColumns: 4;
+  }
+}
+@media screen and (min-width: 1400px) {
+  html {
+    --numberOfBackdropColumns: 4;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

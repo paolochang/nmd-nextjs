@@ -1,3 +1,34 @@
+export const sorting = [
+  {
+    value: "popularityDescending",
+    title: "Popularity Descending",
+  },
+  {
+    value: "popularityAscending",
+    title: "Popularity Ascending",
+  },
+  {
+    value: "ratingDescending",
+    title: "Rating Descending",
+  },
+  {
+    value: "ratingAscending",
+    title: "Rating Ascending",
+  },
+  {
+    value: "releaseDescending",
+    title: "Release Date Descending",
+  },
+  {
+    value: "releaseAscending",
+    title: "Release Date Ascending",
+  },
+  {
+    value: "titleAtoZ",
+    title: "Title (A-Z)",
+  },
+];
+
 export const genres = [
   {
     id: 28,

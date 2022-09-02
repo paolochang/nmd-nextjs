@@ -4,7 +4,12 @@ export default function Layout({ children }) {
   return (
     <>
       <Navbar />
-      <div>{children}</div>
+      <div className="container">{children}</div>
+      <style jsx>{`
+        .container {
+          max-width: 1400px;
+        }
+      `}</style>
     </>
   );
 }
