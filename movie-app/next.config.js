@@ -1,4 +1,4 @@
-const TMDB_APIKEY = "e5436e2dc1da4aa902850179819616b9"; //process.env.TMDB_APIKEY;
+const TMDB_APIKEY = process.env.TMDB_APIKEY;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
