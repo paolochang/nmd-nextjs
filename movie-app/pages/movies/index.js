@@ -9,6 +9,7 @@ import StarIcon from "@mui/icons-material/Star";
 import { useRouter } from "next/router";
 import { sorting } from "../../data/data";
 import { useMovie } from "../../context/movie";
+import useScrollPosition from "../../hook/useScrollPosition";
 
 export default function index() {
   const router = useRouter();
@@ -16,9 +17,15 @@ export default function index() {
   const [sortValue, setSortValue] = useState(sorting[0].value);
   const { movies, page, setPage, getPopularMovies, addPopularMovies } =
     useMovie();
+  const { resetScrollPosition, retainScrollPosition } = useScrollPosition();
 
   useEffect(() => {
-    getPopularMovies(sorting[0].value);
+    if (movies.length == 0) {
+      getPopularMovies(sorting[0].value);
+      resetScrollPosition();
+    } else {
+      retainScrollPosition();
+    }
   }, []);
 
   const onCollapse = (e) => {

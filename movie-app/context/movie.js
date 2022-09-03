@@ -29,7 +29,7 @@ const movieReducer = (state, action) => {
 
 export function MovieProvider({ children }) {
   const [state, dispatch] = useReducer(movieReducer, { movies: [] });
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(2);
 
   const getPopularMovies = useCallback(async (pageFilter) => {
     const response = await fetch(
@@ -41,13 +41,10 @@ export function MovieProvider({ children }) {
 
   const addPopularMovies = useCallback(
     async (pageFilter) => {
-      console.log(page);
-      console.log(page);
       const response = await fetch(
         `http://localhost:3000/api/getPopularMovies?page=${pageFilter}`
       );
       const { results } = await response.json();
-      console.log(results);
       dispatch({ type: "ADD_POPULAR_MOVIES_DESCENDING", payload: results });
     },
     [page]
